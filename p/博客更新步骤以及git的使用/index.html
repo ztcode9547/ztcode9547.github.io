@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="上传文档到博客的步骤 首先创建一个文档，指令为：hugo new content post/名字/index.zh-cn.md 在文档内添加头部信息，包括标签，时间等 1 2 3 4 5 6 7 8 --- title: &#34;使用 Hugo 建立自己的 Blog&#34; date: 2023-07-01T11:25:40+08:00 tags: [&#34;hugo&#34;, &#34;blog&#34;] categories: [&#34;博客改造&#34;] image: florian-klauer-nptLmg6jqDo-unsplash.jpg draft: false --- 解释：\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="上传文档到博客的步骤 首先创建一个文档，指令为：hugo new content post/名字/index.zh-cn.md 在文档内添加头部信息，包括标签，时间等 1 2 3 4 5 6 7 8 --- title: &#34;使用 Hugo 建立自己的 Blog&#34; date: 2023-07-01 tags: [&#34;hugo&#34;, &#34;blog&#34;] categories: [&#34;博客改造&#34;] image: florian-klauer-nptLmg6jqDo-unsplash.jpg draft: false --- 解释：\n">
 <title>博客更新步骤以及git的使用</title>
 
 <link rel='canonical' href='https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="博客更新步骤以及git的使用">
-<meta property='og:description' content="上传文档到博客的步骤 首先创建一个文档，指令为：hugo new content post/名字/index.zh-cn.md 在文档内添加头部信息，包括标签，时间等 1 2 3 4 5 6 7 8 --- title: &#34;使用 Hugo 建立自己的 Blog&#34; date: 2023-07-01T11:25:40+08:00 tags: [&#34;hugo&#34;, &#34;blog&#34;] categories: [&#34;博客改造&#34;] image: florian-klauer-nptLmg6jqDo-unsplash.jpg draft: false --- 解释：\n">
+<meta property='og:description' content="上传文档到博客的步骤 首先创建一个文档，指令为：hugo new content post/名字/index.zh-cn.md 在文档内添加头部信息，包括标签，时间等 1 2 3 4 5 6 7 8 --- title: &#34;使用 Hugo 建立自己的 Blog&#34; date: 2023-07-01 tags: [&#34;hugo&#34;, &#34;blog&#34;] categories: [&#34;博客改造&#34;] image: florian-klauer-nptLmg6jqDo-unsplash.jpg draft: false --- 解释：\n">
 <meta property='og:url' content='https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/'>
 <meta property='og:site_name' content='404_abandon'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='blog' /><meta property='og:image' content='https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2023-09-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke.jpg' />
 <meta name="twitter:title" content="博客更新步骤以及git的使用">
-<meta name="twitter:description" content="上传文档到博客的步骤 首先创建一个文档，指令为：hugo new content post/名字/index.zh-cn.md 在文档内添加头部信息，包括标签，时间等 1 2 3 4 5 6 7 8 --- title: &#34;使用 Hugo 建立自己的 Blog&#34; date: 2023-07-01T11:25:40+08:00 tags: [&#34;hugo&#34;, &#34;blog&#34;] categories: [&#34;博客改造&#34;] image: florian-klauer-nptLmg6jqDo-unsplash.jpg draft: false --- 解释：\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="上传文档到博客的步骤 首先创建一个文档，指令为：hugo new content post/名字/index.zh-cn.md 在文档内添加头部信息，包括标签，时间等 1 2 3 4 5 6 7 8 --- title: &#34;使用 Hugo 建立自己的 Blog&#34; date: 2023-07-01 tags: [&#34;hugo&#34;, &#34;blog&#34;] categories: [&#34;博客改造&#34;] image: florian-klauer-nptLmg6jqDo-unsplash.jpg draft: false --- 解释：\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -245,6 +245,25 @@
     
     
     
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2023-09-14</time>
+            </div>
+        
+
+        
+    </footer>
+    
 
     
 </div>
@@ -273,7 +292,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
 </span></span><span class="line"><span class="cl">title: &#34;使用 Hugo 建立自己的 Blog&#34;  
-</span></span><span class="line"><span class="cl">date: 2023-07-01T11:25:40+08:00   
+</span></span><span class="line"><span class="cl">date: 2023-07-01  
 </span></span><span class="line"><span class="cl">tags: [&#34;hugo&#34;, &#34;blog&#34;]           
 </span></span><span class="line"><span class="cl">categories: [&#34;博客改造&#34;] 
 </span></span><span class="line"><span class="cl">image: florian-klauer-nptLmg6jqDo-unsplash.jpg 
@@ -290,7 +309,7 @@
 <p>title: &ldquo;使用 Hugo 建立自己的 Blog&rdquo;  //博客名字</p>
 </li>
 <li>
-<p>date: 2023-07-01T11:25:40+08:00   //时间</p>
+<p>date: 2023-07-01   //时间</p>
 </li>
 <li>
 <p>tags: [&ldquo;hugo&rdquo;, &ldquo;blog&rdquo;]           //标签</p>

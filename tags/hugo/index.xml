@@ -6,10 +6,11 @@
         <description>Recent content in Hugo on 404_abandon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>404_abandon</copyright><atom:link href="https://ztcode9547.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>404_abandon</copyright>
+        <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>博客更新步骤以及git的使用</title>
         <link>https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
         
         <guid>https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
         <description>&lt;img src="https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke.jpg" alt="Featured image of post 博客更新步骤以及git的使用" /&gt;&lt;h1 id=&#34;上传文档到博客的步骤&#34;&gt;上传文档到博客的步骤
@@ -31,7 +32,7 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;使用 Hugo 建立自己的 Blog&amp;#34;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: 2023-07-01T11:25:40+08:00   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: 2023-07-01  
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tags: [&amp;#34;hugo&amp;#34;, &amp;#34;blog&amp;#34;]           
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;categories: [&amp;#34;博客改造&amp;#34;] 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;image: florian-klauer-nptLmg6jqDo-unsplash.jpg 
@@ -48,7 +49,7 @@
 &lt;p&gt;title: &amp;ldquo;使用 Hugo 建立自己的 Blog&amp;rdquo;  //博客名字&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;date: 2023-07-01T11:25:40+08:00   //时间&lt;/p&gt;
+&lt;p&gt;date: 2023-07-01   //时间&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;tags: [&amp;ldquo;hugo&amp;rdquo;, &amp;ldquo;blog&amp;rdquo;]           //标签&lt;/p&gt;

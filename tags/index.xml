@@ -6,10 +6,11 @@
         <description>Recent content in Tags on 404_abandon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>404_abandon</copyright><atom:link href="https://ztcode9547.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>404_abandon</copyright>
+        <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Blog</title>
         <link>https://ztcode9547.github.io/tags/blog/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
         
         <guid>https://ztcode9547.github.io/tags/blog/</guid>
         <description></description>
@@ -17,7 +18,7 @@
         <item>
         <title>Hugo</title>
         <link>https://ztcode9547.github.io/tags/hugo/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
         
         <guid>https://ztcode9547.github.io/tags/hugo/</guid>
         <description></description>
