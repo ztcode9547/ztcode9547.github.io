@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.134.2"><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="演示说明">
-<title>404_abandon</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 1.局域网：覆盖范围较小的计算机网络，外面访问不到。\n2.广域网：是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
+<title>socket编程</title>
 
-<link rel='canonical' href='https://ztcode9547.github.io/'>
+<link rel='canonical' href='https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="404_abandon">
-<meta property='og:description' content="演示说明">
-<meta property='og:url' content='https://ztcode9547.github.io/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="socket编程">
+<meta property='og:description' content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 1.局域网：覆盖范围较小的计算机网络，外面访问不到。\n2.广域网：是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
+<meta property='og:url' content='https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/'>
 <meta property='og:site_name' content='404_abandon'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-09-16T00:00:00&#43;00:00 '/>
-<meta name="twitter:title" content="404_abandon">
-<meta name="twitter:description" content="演示说明"><link rel="alternate" type="application/rss&#43;xml" href="https://ztcode9547.github.io/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='网络通信' /><meta property='article:published_time' content='2023-07-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-07-01T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="socket编程">
+<meta name="twitter:description" content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 1.局域网：覆盖范围较小的计算机网络，外面访问不到。\n2.广域网：是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -77,7 +78,7 @@
         
         
         
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -205,69 +206,10 @@
     <aside class="sidebar right-sidebar sticky">
         
             
-                <form action="/search/" class="search-form widget" >
-        <p>
-            <label>搜索</label>
-            <input name="keyword" required placeholder="输入关键词..." />
-        
-            <button title="搜索">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
+                
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">归档</h2>
-
-        
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/archives/#2024">
-                        
-                            <span class="year">2024</span>
-                            <span class="count">1</span>
-                        
-                    </a> 
-                </div>
-            <div class="archives-year">
-                    <a href="/archives/#2023">
-                        
-                            <span class="year">2023</span>
-                            <span class="count">2</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -277,25 +219,21 @@
 
 
 
-    </div>
-    <h2 class="widget-title section-title">分类</h2>
-
-    <div class="tagCloud-tags">
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
         
-            <a href="/categories/linux/" class="font_size_1">
-                Linux
-            </a>
-        
-            <a href="/categories/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/" class="font_size_1">
-                优化算法
-            </a>
-        
-            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0/" class="font_size_1">
-                博客更新
-            </a>
-        
-    </div>
-</section>
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#基本概念">基本概念</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
             
         
@@ -303,133 +241,7 @@
 
 
             <main class="main full-width">
-    
-    
-    
-    
-
-    <section class="article-list">
-        
-            
-<article class="">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/" >
-                优化算法
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/">优化算法论文</a>
-        </h2>
-    
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2024-09-16</time>
-            </div>
-        
-
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                <img src="/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke_hu9981156751056459862.jpg"
-                        srcset="/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke_hu9981156751056459862.jpg 800w, /p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke_hu5400509117957698867.jpg 1600w"
-                        width="800" 
-                        height="453" 
-                        loading="lazy"
-                        alt="Featured image of post 博客更新步骤以及git的使用" />
-                
-            </a>
-        </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0/" >
-                博客更新
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/">博客更新步骤以及git的使用</a>
-        </h2>
-    
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2023-09-14</time>
-            </div>
-        
-
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
-        
-            
-<article class="">
+    <article class="main-article">
     <header class="article-header">
 
     <div class="article-details">
@@ -479,10 +291,95 @@
 </div>
 
 </header>
-</article>
+
+    <section class="article-content">
+    
+    
+    <p>网络通信：Socket+IO复用+多线程或者线程池+libevent框架</p>
+<h3 id="基本概念">基本概念
+</h3><p>1.局域网：<strong>覆盖范围较小的计算机网络，外面访问不到。</strong></p>
+<p>2.广域网：<strong>是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。</strong></p>
+<p>3.网络协议：<strong>是互相通信对等实体必须遵守的一种规则，这种规则可以是标准的，也可以说自定义的。</strong></p>
+<p>4.IP协议：</p>
+<ul>
+<li>
+<p>是表示终端在网络中的地址，分为IPv4和IPv6。</p>
+</li>
+<li>
+<p>我们在window系统cmd下输入命令ipconfig或者在Linux系统下输入ifconfig都可以显示ip地址，这个ip地址是局域网内的ip地址，如果使用网线接入外网，会统一分配公网IP地址。</p>
+</li>
+<li>
+<p>IPv4本质是一个整形数，有4个字节，所以有32位，所以有2的32次方个ip地址。</p>
+</li>
+<li>
+<p>IPv4使用点分十进制来表示，比如192.168.247.135，最小为：0.0.0.0，最大为：255.255.255.255。</p>
+</li>
+<li>
+<p>可以使用ping+域名的方式查看当前设备是否能访问域名地址。</p>
+</li>
+</ul>
+<p>5.端口：</p>
+<ul>
+<li>
+<p><strong>ip地址是能够定位设备，端口是能够定位计算机里面的进程。</strong></p>
+</li>
+<li>
+<p>端口本质是一个无符号的短整型，占两个字节，所以有0到65535种可能性。</p>
+</li>
+</ul>
+<p>6.Tcp/Ip四层模型：</p>
+<p><img src="/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B.png"
+	width="189"
+	height="514"
+	srcset="/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B_hu1767345724923505170.png 480w, /p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B_hu4686904838196450558.png 1024w"
+	loading="lazy"
+	
+		alt="Tcp_Ip四层模型"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="36"
+		data-flex-basis="88px"
+	
+></p>
+<p>应用层：最上层，也是程序员写业务的层次。有HTTP（超文本传输协议），FTP（文件传输协议）</p>
+<p>传输层：TCP协议，UDP协议</p>
+<p>网络层：IP协议</p>
+<p>网络接口层：无线局域网（WLAN），以太网（Ethernet）</p>
+<ol start="7">
+<li></li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a>
         
     </section>
-<footer class="site-footer">
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
@@ -496,6 +393,85 @@
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
 
             </main>
         </div>

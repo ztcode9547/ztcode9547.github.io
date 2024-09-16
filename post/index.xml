@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_abandon</copyright>
-        <lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>优化算法论文</title>
         <link>https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/</link>
-        <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/</guid>
         <description>&lt;p&gt;论文l：IHAOAVOA: An improved hybrid aquila optimizer and African vultures optimization algorithm for global optimization problems
@@ -173,6 +173,7 @@ IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃�
 		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;想法：使用螺旋对立学习+一个算法进行勘探+FDB+AVOA进行开发&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -249,6 +250,68 @@ IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃�
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;git的使用&#34;&gt;git的使用
 &lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>socket编程</title>
+        <link>https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/</link>
+        <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/</guid>
+        <description>&lt;p&gt;网络通信：Socket+IO复用+多线程或者线程池+libevent框架&lt;/p&gt;
+&lt;h3 id=&#34;基本概念&#34;&gt;基本概念
+&lt;/h3&gt;&lt;p&gt;1.局域网：&lt;strong&gt;覆盖范围较小的计算机网络，外面访问不到。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2.广域网：&lt;strong&gt;是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3.网络协议：&lt;strong&gt;是互相通信对等实体必须遵守的一种规则，这种规则可以是标准的，也可以说自定义的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4.IP协议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;是表示终端在网络中的地址，分为IPv4和IPv6。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们在window系统cmd下输入命令ipconfig或者在Linux系统下输入ifconfig都可以显示ip地址，这个ip地址是局域网内的ip地址，如果使用网线接入外网，会统一分配公网IP地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IPv4本质是一个整形数，有4个字节，所以有32位，所以有2的32次方个ip地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IPv4使用点分十进制来表示，比如192.168.247.135，最小为：0.0.0.0，最大为：255.255.255.255。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以使用ping+域名的方式查看当前设备是否能访问域名地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;5.端口：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ip地址是能够定位设备，端口是能够定位计算机里面的进程。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;端口本质是一个无符号的短整型，占两个字节，所以有0到65535种可能性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;6.Tcp/Ip四层模型：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B.png&#34;
+	width=&#34;189&#34;
+	height=&#34;514&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B_hu1767345724923505170.png 480w, https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B_hu4686904838196450558.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Tcp_Ip四层模型&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;36&#34;
+		data-flex-basis=&#34;88px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;应用层：最上层，也是程序员写业务的层次。有HTTP（超文本传输协议），FTP（文件传输协议）&lt;/p&gt;
+&lt;p&gt;传输层：TCP协议，UDP协议&lt;/p&gt;
+&lt;p&gt;网络层：IP协议&lt;/p&gt;
+&lt;p&gt;网络接口层：无线局域网（WLAN），以太网（Ethernet）&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
         </item>
         
     </channel>

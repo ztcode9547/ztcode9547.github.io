@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_abandon</copyright>
-        <lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>优化算法论文</title>
         <link>https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/</link>
-        <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/</guid>
         <description>&lt;p&gt;论文l：IHAOAVOA: An improved hybrid aquila optimizer and African vultures optimization algorithm for global optimization problems
@@ -173,6 +173,7 @@ IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃�
 		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;想法：使用螺旋对立学习+一个算法进行勘探+FDB+AVOA进行开发&lt;/p&gt;
 </description>
         </item>
         
