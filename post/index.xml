@@ -7,7 +7,138 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_abandon</copyright>
-        <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>优化算法论文</title>
+        <link>https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/</link>
+        <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/</guid>
+        <description>&lt;p&gt;论文l：IHAOAVOA: An improved hybrid aquila optimizer and African vultures optimization algorithm for global optimization problems
+IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃鹫优化算法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;AO：Aquila 优化器（2021）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AO的特点：具有较强的全局勘探能力，但局部开发能力不够。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;证明第二点论据的论文：S. Wang, H. Jia, L. Abualigah, Q. Liu, R. Zheng, An improved hybrid aquila optimizer and harris hawks algorithm for solving industrial engineering optimization problems, Processes, 9 (2021),1551. &lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.3390/pr9091551&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doi.org/10.3390/pr9091551&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原因：不可避免地存在过早收敛和容易陷入局部极小值，主要是由于利用阶段不充分导致的，exploration占2/3，exploiation只占1/3。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;四种策列，勘探阶段和开发阶段各占两种。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/AO.png&#34;
+	width=&#34;664&#34;
+	height=&#34;443&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/AO_hu4501671214488804369.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/AO_hu7967003442029931722.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AO&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;公式3：
+$$
+X
+i
+​
+(t+1)=X
+B
+​
+(t)×(1−&lt;/p&gt;
+&lt;p&gt;t
+/
+T
+​
+)+X
+m
+​
+(t)−X
+B
+​
+(t)×rand
+$$&lt;/p&gt;
+&lt;p&gt;$$
+其中，
+X
+i
+(
+t
++
+1
+)
+是第
+i 个搜索代理在第
+t
++
+1
+代的更新位置，
+X
+B
+(
+t
+)
+是当前的最佳解，
+X
+m
+(
+t
+)
+是当前解的均值，
+rand
+是随机数。
+$$&lt;/p&gt;
+&lt;p&gt;公式5：
+$$
+X
+i
+​
+(t+1)=X
+B
+​
+(t)×Levy(D)+X
+r
+​
+(t)+(y−x)×rand
+$$&lt;/p&gt;
+&lt;p&gt;$$
+其中，
+Levy
+(
+D
+)
+是Lévy飞行分布，
+X
+r
+(
+t
+)&lt;/p&gt;
+&lt;p&gt;是从种群中随机选出的解，
+(
+y
+−
+x
+)
+是当前解与另一个随机解之间的差异，&lt;/p&gt;
+&lt;p&gt;rand 是随机数。
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;+++&lt;/p&gt;
+&lt;p&gt;1.AVOA：非洲秃鹫优化算法（2021）&lt;/p&gt;
+&lt;p&gt;2.AVOA的优点：具有非常好的开发能力，但缺少全局勘探能力。&lt;/p&gt;
+&lt;p&gt;3.AVOA的&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>博客更新步骤以及git的使用</title>
         <link>https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
         <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
