@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on 404_abandon</title>
-        <link>https://ztcode9547.github.io/post/</link>
-        <description>Recent content in Posts on 404_abandon</description>
+        <title>优化算法 on 404_abandon</title>
+        <link>https://ztcode9547.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</link>
+        <description>Recent content in 优化算法 on 404_abandon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_abandon</copyright>
-        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃鹫优化算法</title>
         <link>https://ztcode9547.github.io/p/ihaoavoa%E9%92%88%E5%AF%B9%E5%85%A8%E5%B1%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%94%B9%E8%BF%9B%E6%B7%B7%E5%90%88-aquila-%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E9%9D%9E%E6%B4%B2%E7%A7%83%E9%B9%AB%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</link>
         <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
@@ -174,184 +174,6 @@ IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;想法：使用螺旋对立学习+一个算法进行勘探+FDB+AVOA进行开发&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>博客更新步骤以及git的使用</title>
-        <link>https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
-        <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-        <description>&lt;img src="https://ztcode9547.github.io/p/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8Agit%E7%9A%84%E4%BD%BF%E7%94%A8/gerenboke.jpg" alt="Featured image of post 博客更新步骤以及git的使用" /&gt;&lt;h1 id=&#34;上传文档到博客的步骤&#34;&gt;上传文档到博客的步骤
-&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;首先创建一个文档，指令为：hugo new content post/名字/index.zh-cn.md&lt;/li&gt;
-&lt;li&gt;在文档内添加头部信息，包括标签，时间等&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;使用 Hugo 建立自己的 Blog&amp;#34;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: 2023-07-01  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tags: [&amp;#34;hugo&amp;#34;, &amp;#34;blog&amp;#34;]           
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;categories: [&amp;#34;博客改造&amp;#34;] 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;image: florian-klauer-nptLmg6jqDo-unsplash.jpg 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;draft: false  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;解释：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;“ -  -  -  ”必须要有&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;title: &amp;ldquo;使用 Hugo 建立自己的 Blog&amp;rdquo;  //博客名字&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;date: 2023-07-01   //时间&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;tags: [&amp;ldquo;hugo&amp;rdquo;, &amp;ldquo;blog&amp;rdquo;]           //标签&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;categories: [&amp;ldquo;博客改造&amp;rdquo;]          //归档&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;image: florian-klauer-nptLmg6jqDo-unsplash.jpg //上传博客照片，直接使用文件名&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;draft: false                         //这表示该文章是否是草稿状态，false不会在网站上公开显示。它可以被用来保存和编辑内容，直到你准备好发布为止。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;3.编写博客，上传照片直接拉取，会把找复制到当前文档的文件夹下。&lt;/p&gt;
-&lt;p&gt;4.使用命令hugo server -D 生成静态页面&lt;/p&gt;
-&lt;p&gt;5.使用命令自动部署&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#34;提交信息&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;git的使用&#34;&gt;git的使用
-&lt;/h1&gt;</description>
-        </item>
-        <item>
-        <title>socket编程</title>
-        <link>https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/</link>
-        <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/</guid>
-        <description>&lt;p&gt;网络通信：Socket+IO复用+多线程或者线程池+libevent框架&lt;/p&gt;
-&lt;h3 id=&#34;基本概念&#34;&gt;基本概念
-&lt;/h3&gt;&lt;p&gt;1.局域网：&lt;strong&gt;覆盖范围较小的计算机网络，外面访问不到。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;2.广域网：&lt;strong&gt;是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;3.网络协议：&lt;strong&gt;是互相通信对等实体必须遵守的一种规则，这种规则可以是标准的，也可以说自定义的。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;4.IP协议：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;是表示终端在网络中的地址，分为IPv4和IPv6。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;我们在window系统cmd下输入命令ipconfig或者在Linux系统下输入ifconfig都可以显示ip地址，这个ip地址是局域网内的ip地址，如果使用网线接入外网，会统一分配公网IP地址。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;IPv4本质是一个整形数，有4个字节，所以有32位，所以有2的32次方个ip地址。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;IPv4使用点分十进制来表示，比如192.168.247.135，最小为：0.0.0.0，最大为：255.255.255.255。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可以使用ping+域名的方式查看当前设备是否能访问域名地址。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;5.端口：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;ip地址是能够定位设备，端口是能够定位计算机里面的进程。&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;端口本质是一个无符号的短整型，占两个字节，所以有0到65535种可能性。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;6.Tcp/Ip四层模型：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B.png&#34;
-	width=&#34;189&#34;
-	height=&#34;514&#34;
-	srcset=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B_hu1767345724923505170.png 480w, https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B_hu4686904838196450558.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Tcp_Ip四层模型&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;36&#34;
-		data-flex-basis=&#34;88px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;应用层：最上层，也是程序员写业务的层次。有HTTP（超文本传输协议），FTP（文件传输协议）&lt;/p&gt;
-&lt;p&gt;传输层：TCP协议，UDP协议&lt;/p&gt;
-&lt;p&gt;网络层：IP协议&lt;/p&gt;
-&lt;p&gt;网络接口层：无线局域网（WLAN），以太网（Ethernet）&lt;/p&gt;
-&lt;p&gt;7.字节序&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;顾名思义是字节的顺序，就是大于一个字节类型的数据在内存中的存放顺序，也就是说对于单字符来说是没有字节序问题的，字符串是单字符的集合，因此字符串也没有字节序问题。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;目前字节序有两种：小端字节序（主机字节序）和大端字节序（网络字节序）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;小端字节序（主机字节序）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;数据的地位存储到内存的地位，数据的高位存储到内存的高位。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;我们使用的PC机，数据的存储默认使用的是小端。&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;大端字节序（网络字节序）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;数据的地位存储内存的高位，数据的高位存储内存的地位。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;套接字通信过程中操作的数据都是大端存储的，包括：接收/发送的数据、IP地址、端口。&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;总结:我们使用的设备是用主机字节序的，而网络通信是使用网络字节序的，所以我们要把数据转为网络字节序进行通信，通信结束，然后又把网络字节序转为主机字节序进行接收。&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;字节序举例：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/%E5%AD%97%E8%8A%82%E5%BA%8F%E7%9A%84%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%E4%B8%BE%E4%BE%8B.png&#34;
-	width=&#34;444&#34;
-	height=&#34;150&#34;
-	srcset=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/%E5%AD%97%E8%8A%82%E5%BA%8F%E7%9A%84%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%E4%B8%BE%E4%BE%8B_hu15231814666717699858.png 480w, https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/%E5%AD%97%E8%8A%82%E5%BA%8F%E7%9A%84%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%E4%B8%BE%E4%BE%8B_hu96969010991770678.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;字节序的存储方式举例&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;296&#34;
-		data-flex-basis=&#34;710px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;8.Socket网络通信：&lt;/p&gt;
-&lt;p&gt;​	就像一台排插，排插就是服务器，插头就是客户端，排插有多个插口，等待多个插头链接。和套接字相关的函数被包含在头文件&lt;strong&gt;sys/socket.h&lt;/strong&gt;中。&lt;/p&gt;
-&lt;p&gt;9.TCP通信流程&lt;/p&gt;
 </description>
         </item>
         
