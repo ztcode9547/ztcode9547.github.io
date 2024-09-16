@@ -45,97 +45,134 @@ IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃�
 		data-flex-basis=&#34;359px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;公式3：
-$$
-X
-i
-​
-(t+1)=X
-B
-​
-(t)×(1−&lt;/p&gt;
-&lt;p&gt;t
-/
-T
-​
-)+X
-m
-​
-(t)−X
-B
-​
-(t)×rand
-$$&lt;/p&gt;
-&lt;p&gt;$$
-其中，
-X
-i
-(
-t
-+
-1
-)
-是第
-i 个搜索代理在第
-t
-+
-1
-代的更新位置，
-X
-B
-(
-t
-)
-是当前的最佳解，
-X
-m
-(
-t
-)
-是当前解的均值，
-rand
-是随机数。
-$$&lt;/p&gt;
-&lt;p&gt;公式5：
-$$
-X
-i
-​
-(t+1)=X
-B
-​
-(t)×Levy(D)+X
-r
-​
-(t)+(y−x)×rand
-$$&lt;/p&gt;
-&lt;p&gt;$$
-其中，
-Levy
-(
-D
-)
-是Lévy飞行分布，
-X
-r
-(
-t
-)&lt;/p&gt;
-&lt;p&gt;是从种群中随机选出的解，
-(
-y
-−
-x
-)
-是当前解与另一个随机解之间的差异，&lt;/p&gt;
-&lt;p&gt;rand 是随机数。
-$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;+++&lt;/p&gt;
 &lt;p&gt;1.AVOA：非洲秃鹫优化算法（2021）&lt;/p&gt;
 &lt;p&gt;2.AVOA的优点：具有非常好的开发能力，但缺少全局勘探能力。&lt;/p&gt;
-&lt;p&gt;3.AVOA的&lt;/p&gt;
+&lt;p&gt;3.AVOA的步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确定最好种群和第二好种群&lt;/li&gt;
+&lt;li&gt;计算饥饿率,AVOA是根据饥饿率来确定勘探阶段和开发阶段的，饥饿率的计算是有一套公式，里面有随机值，有一定的随机性，也有根据迭代的代数影响，但总的趋势是越来越小。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4.勘探有两个方法，开发有四种方法，所以说它开发能力强。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/AVOA.png&#34;
+	width=&#34;820&#34;
+	height=&#34;622&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/AVOA_hu290162664172404953.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/AVOA_hu18143517445891520367.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AVOA&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;316px&#34;
+	
+&gt;
++++&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;OBL：对立学习&lt;/li&gt;
+&lt;li&gt;OBL主要思想是同时评估当前解的适应度和对立解的适应度，然后保留较优解。&lt;/li&gt;
+&lt;li&gt;缺点：OBL只能在一个固定位置生成对立解，仍然无法改善复杂问题的缺陷&lt;/li&gt;
+&lt;li&gt;证明第3点论据的论文：Q. Fan, Z. Chen, W. Zhang, X. Fang, ESSAWOA: Enhanced whale optimization algorithm integrated with salp swarm algorithm for global optimization, Eng. Comput., 38 (2022), 797–814.https://doi.org/10.1007/s00366-020-01189-3&lt;/li&gt;
+&lt;li&gt;LOBL：镜头对立学习&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E9%95%9C%E5%A4%B4%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0.png&#34;
+	width=&#34;364&#34;
+	height=&#34;104&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E9%95%9C%E5%A4%B4%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu5415431286618934143.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E9%95%9C%E5%A4%B4%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu7795938024961118886.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;镜头对立学习&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;350&#34;
+		data-flex-basis=&#34;840px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;6.ROBL：随机对立学习，用rand（）函数，具有较大的随机性，可以增加种群的多样性。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0.png&#34;
+	width=&#34;349&#34;
+	height=&#34;48&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu7422122660781228943.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu1657331986030756242.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;随机对立学习&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;727&#34;
+		data-flex-basis=&#34;1745px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;7.COBL:该论文的复合对立学习：使用概率决定使用LOBL或者ROBL&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E5%A4%8D%E5%90%88%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0.png&#34;
+	width=&#34;475&#34;
+	height=&#34;113&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E5%A4%8D%E5%90%88%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu9487339012414390900.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/%E5%A4%8D%E5%90%88%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu4076987820129490750.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;复合对立学习&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;420&#34;
+		data-flex-basis=&#34;1008px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;+++&lt;/p&gt;
+&lt;p&gt;Fitness-Distance Balance:适应值-距离平衡（FDB）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在共生有机体搜索（SOS），随机分形搜索（SFS），郊狼优化算法（COA）有使用到这种方法&lt;/li&gt;
+&lt;li&gt;FDB在得分不仅考虑候选解的适应度，还考虑和最优解的距离&lt;/li&gt;
+&lt;li&gt;可以在哪些地方使用：在一些方法里面有使用到，在种群里面随机找一个解的这种情况，可以使用FDB个体，进行代替&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;+++&lt;/p&gt;
+&lt;p&gt;IHAOAVOA&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA.png&#34;
+	width=&#34;848&#34;
+	height=&#34;349&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_hu6629975132163105008.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_hu4015625125010833226.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IHAOAVOA&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;242&#34;
+		data-flex-basis=&#34;583px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_2.png&#34;
+	width=&#34;840&#34;
+	height=&#34;130&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_2_hu9747142882845801822.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_2_hu9799744160950450164.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IHAOAVOA_2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;646&#34;
+		data-flex-basis=&#34;1550px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_3.png&#34;
+	width=&#34;1090&#34;
+	height=&#34;783&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_3_hu12030634840986773169.png 480w, https://ztcode9547.github.io/p/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87/IHAOAVOA_3_hu5345335090662158209.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IHAOAVOA_3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;334px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
