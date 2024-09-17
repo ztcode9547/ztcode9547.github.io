@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 1.局域网 覆盖范围较小的计算机网络，外面访问不到。\n2.广域网 是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 局域网 覆盖范围较小的计算机网络，外面访问不到。\n广域网 是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
 <title>socket编程</title>
 
 <link rel='canonical' href='https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="socket编程">
-<meta property='og:description' content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 1.局域网 覆盖范围较小的计算机网络，外面访问不到。\n2.广域网 是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
+<meta property='og:description' content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 局域网 覆盖范围较小的计算机网络，外面访问不到。\n广域网 是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
 <meta property='og:url' content='https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/'>
 <meta property='og:site_name' content='404_abandon'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='网络通信' /><meta property='article:published_time' content='2023-07-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-07-01T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="socket编程">
-<meta name="twitter:description" content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 1.局域网 覆盖范围较小的计算机网络，外面访问不到。\n2.广域网 是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
+<meta name="twitter:description" content="网络通信：Socket+IO复用+多线程或者线程池+libevent框架\n基本概念 局域网 覆盖范围较小的计算机网络，外面访问不到。\n广域网 是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -225,16 +225,16 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#1局域网">1.局域网</a></li>
-    <li><a href="#2广域网">2.广域网</a></li>
-    <li><a href="#3网络协议">3.网络协议</a></li>
-    <li><a href="#4ip协议">4.IP协议</a></li>
-    <li><a href="#5端口">5.端口</a></li>
-    <li><a href="#6tcpip四层模型">6.Tcp/Ip四层模型</a></li>
-    <li><a href="#7字节序">7.字节序</a></li>
-    <li><a href="#8socket网络通信">8.Socket网络通信</a></li>
-    <li><a href="#9tcp通信流程">9.TCP通信流程</a></li>
-    <li><a href="#10文件描述符在网络通信中的作用">10.文件描述符在网络通信中的作用</a></li>
+    <li><a href="#局域网">局域网</a></li>
+    <li><a href="#广域网">广域网</a></li>
+    <li><a href="#网络协议">网络协议</a></li>
+    <li><a href="#ip协议">IP协议</a></li>
+    <li><a href="#端口">端口</a></li>
+    <li><a href="#tcpip四层模型">Tcp/Ip四层模型</a></li>
+    <li><a href="#字节序">字节序</a></li>
+    <li><a href="#socket网络通信">Socket网络通信</a></li>
+    <li><a href="#tcp通信流程">TCP通信流程</a></li>
+    <li><a href="#文件描述符在网络通信中的作用">文件描述符在网络通信中的作用</a></li>
   </ol>
 
   <ol>
@@ -307,13 +307,13 @@
     
     <p>网络通信：Socket+IO复用+多线程或者线程池+libevent框架</p>
 <h1 id="基本概念">基本概念
-</h1><h2 id="1局域网">1.局域网
+</h1><h2 id="局域网">局域网
 </h2><p><strong>覆盖范围较小的计算机网络，外面访问不到。</strong></p>
-<h2 id="2广域网">2.广域网
+<h2 id="广域网">广域网
 </h2><p><strong>是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。</strong></p>
-<h2 id="3网络协议">3.网络协议
+<h2 id="网络协议">网络协议
 </h2><p><strong>是互相通信对等实体必须遵守的一种规则，这种规则可以是标准的，也可以说自定义的。</strong></p>
-<h2 id="4ip协议">4.IP协议
+<h2 id="ip协议">IP协议
 </h2><ul>
 <li>
 <p>是表示终端在网络中的地址，分为IPv4和IPv6。</p>
@@ -331,7 +331,7 @@
 <p>可以使用ping+域名的方式查看当前设备是否能访问域名地址。</p>
 </li>
 </ul>
-<h2 id="5端口">5.端口
+<h2 id="端口">端口
 </h2><ul>
 <li>
 <p><strong>ip地址是能够定位设备，端口是能够定位计算机里面的进程。</strong></p>
@@ -340,7 +340,7 @@
 <p>端口本质是一个无符号的短整型，占两个字节，所以有0到65535种可能性。</p>
 </li>
 </ul>
-<h2 id="6tcpip四层模型">6.Tcp/Ip四层模型
+<h2 id="tcpip四层模型">Tcp/Ip四层模型
 </h2><p><img src="/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B.png"
 	width="189"
 	height="514"
@@ -359,7 +359,7 @@
 <p>传输层：TCP协议，UDP协议</p>
 <p>网络层：IP协议</p>
 <p>网络接口层：无线局域网（WLAN），以太网（Ethernet）</p>
-<h2 id="7字节序">7.字节序
+<h2 id="字节序">字节序
 </h2><ul>
 <li>
 <p>顾名思义是字节的顺序，就是大于一个字节类型的数据在内存中的存放顺序，也就是说对于单字符来说是没有字节序问题的，字符串是单字符的集合，因此字符串也没有字节序问题。</p>
@@ -403,9 +403,9 @@
 		data-flex-basis="710px"
 	
 ></p>
-<h2 id="8socket网络通信">8.Socket网络通信
+<h2 id="socket网络通信">Socket网络通信
 </h2><p>​	就像一台排插，排插就是服务器，插头就是客户端，排插有多个插口，等待多个插头链接。和套接字相关的函数被包含在头文件<strong>sys/socket.h</strong>中。</p>
-<h2 id="9tcp通信流程">9.TCP通信流程
+<h2 id="tcp通信流程">TCP通信流程
 </h2><p>TCP三大特点：面向连接，安全，流式传输</p>
 <p><strong>面向连接：是一个全双工的通信，三次握手建立连接，四次挥手解除链接。</strong></p>
 <p><strong>安全：会对每一个包进行校验，丢包会重发。</strong></p>
@@ -424,7 +424,7 @@
 		data-flex-basis="169px"
 	
 ></p>
-<h2 id="10文件描述符在网络通信中的作用">10.文件描述符在网络通信中的作用
+<h2 id="文件描述符在网络通信中的作用">文件描述符在网络通信中的作用
 </h2><ul>
 <li>
 <p>一个文件描述符对应两个内存。一个叫读缓冲区，一个叫写缓冲区。我们在调用accept函数，send函数和wirte函数时，客户端和服务器不是直接发送的，而是通过这些函数往这些缓冲区写数据或者读数据，然后内核会帮我们从缓冲区里面拿数据进行网络通信，是操作系统自动的。</p>

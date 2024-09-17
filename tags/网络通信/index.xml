@@ -15,13 +15,13 @@
         <guid>https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/</guid>
         <description>&lt;p&gt;网络通信：Socket+IO复用+多线程或者线程池+libevent框架&lt;/p&gt;
 &lt;h1 id=&#34;基本概念&#34;&gt;基本概念
-&lt;/h1&gt;&lt;h2 id=&#34;1局域网&#34;&gt;1.局域网
+&lt;/h1&gt;&lt;h2 id=&#34;局域网&#34;&gt;局域网
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;覆盖范围较小的计算机网络，外面访问不到。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2广域网&#34;&gt;2.广域网
+&lt;h2 id=&#34;广域网&#34;&gt;广域网
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;是一种覆盖广泛地理区域的计算机网络，它可以跨越城市、国家甚至跨越大陆。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;3网络协议&#34;&gt;3.网络协议
+&lt;h2 id=&#34;网络协议&#34;&gt;网络协议
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;是互相通信对等实体必须遵守的一种规则，这种规则可以是标准的，也可以说自定义的。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;4ip协议&#34;&gt;4.IP协议
+&lt;h2 id=&#34;ip协议&#34;&gt;IP协议
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;是表示终端在网络中的地址，分为IPv4和IPv6。&lt;/p&gt;
@@ -39,7 +39,7 @@
 &lt;p&gt;可以使用ping+域名的方式查看当前设备是否能访问域名地址。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;5端口&#34;&gt;5.端口
+&lt;h2 id=&#34;端口&#34;&gt;端口
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;ip地址是能够定位设备，端口是能够定位计算机里面的进程。&lt;/strong&gt;&lt;/p&gt;
@@ -48,7 +48,7 @@
 &lt;p&gt;端口本质是一个无符号的短整型，占两个字节，所以有0到65535种可能性。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;6tcpip四层模型&#34;&gt;6.Tcp/Ip四层模型
+&lt;h2 id=&#34;tcpip四层模型&#34;&gt;Tcp/Ip四层模型
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/Tcp_Ip%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B.png&#34;
 	width=&#34;189&#34;
 	height=&#34;514&#34;
@@ -67,7 +67,7 @@
 &lt;p&gt;传输层：TCP协议，UDP协议&lt;/p&gt;
 &lt;p&gt;网络层：IP协议&lt;/p&gt;
 &lt;p&gt;网络接口层：无线局域网（WLAN），以太网（Ethernet）&lt;/p&gt;
-&lt;h2 id=&#34;7字节序&#34;&gt;7.字节序
+&lt;h2 id=&#34;字节序&#34;&gt;字节序
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;顾名思义是字节的顺序，就是大于一个字节类型的数据在内存中的存放顺序，也就是说对于单字符来说是没有字节序问题的，字符串是单字符的集合，因此字符串也没有字节序问题。&lt;/p&gt;
@@ -111,9 +111,9 @@
 		data-flex-basis=&#34;710px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;8socket网络通信&#34;&gt;8.Socket网络通信
+&lt;h2 id=&#34;socket网络通信&#34;&gt;Socket网络通信
 &lt;/h2&gt;&lt;p&gt;​	就像一台排插，排插就是服务器，插头就是客户端，排插有多个插口，等待多个插头链接。和套接字相关的函数被包含在头文件&lt;strong&gt;sys/socket.h&lt;/strong&gt;中。&lt;/p&gt;
-&lt;h2 id=&#34;9tcp通信流程&#34;&gt;9.TCP通信流程
+&lt;h2 id=&#34;tcp通信流程&#34;&gt;TCP通信流程
 &lt;/h2&gt;&lt;p&gt;TCP三大特点：面向连接，安全，流式传输&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;面向连接：是一个全双工的通信，三次握手建立连接，四次挥手解除链接。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;安全：会对每一个包进行校验，丢包会重发。&lt;/strong&gt;&lt;/p&gt;
@@ -132,7 +132,7 @@
 		data-flex-basis=&#34;169px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;10文件描述符在网络通信中的作用&#34;&gt;10.文件描述符在网络通信中的作用
+&lt;h2 id=&#34;文件描述符在网络通信中的作用&#34;&gt;文件描述符在网络通信中的作用
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;一个文件描述符对应两个内存。一个叫读缓冲区，一个叫写缓冲区。我们在调用accept函数，send函数和wirte函数时，客户端和服务器不是直接发送的，而是通过这些函数往这些缓冲区写数据或者读数据，然后内核会帮我们从缓冲区里面拿数据进行网络通信，是操作系统自动的。&lt;/p&gt;
