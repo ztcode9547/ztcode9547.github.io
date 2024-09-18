@@ -13,7 +13,7 @@
         <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/</guid>
-        <description>&lt;p&gt;网络通信：Socket+IO复用+多线程或者线程池+libevent框架&lt;/p&gt;
+        <description>&lt;img src="https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/TCP.png" alt="Featured image of post socket编程" /&gt;&lt;p&gt;网络通信：Socket+IO复用+多线程或者线程池+libevent框架&lt;/p&gt;
 &lt;h1 id=&#34;基本概念&#34;&gt;基本概念
 &lt;/h1&gt;&lt;h2 id=&#34;局域网&#34;&gt;局域网
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;覆盖范围较小的计算机网络，外面访问不到。&lt;/strong&gt;&lt;/p&gt;
@@ -121,10 +121,10 @@
 &lt;p&gt;&lt;strong&gt;面向连接：是一个全双工的通信，三次握手建立连接，四次挥手解除链接。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;安全：会对每一个包进行校验，丢包会重发。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;流式传输：相当于发送接收两端有一条水管，发送多了，接收不了那么多，会让发送慢点。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/TCP%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/TCP.png&#34;
 	width=&#34;445&#34;
 	height=&#34;631&#34;
-	srcset=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/TCP%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B_hu9196714618122811001.png 480w, https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/TCP%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B_hu1595196316029287531.png 1024w&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/TCP_hu9196714618122811001.png 480w, https://ztcode9547.github.io/p/socket%E7%BC%96%E7%A8%8B/TCP_hu1595196316029287531.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;TCP通信流程&#34;
