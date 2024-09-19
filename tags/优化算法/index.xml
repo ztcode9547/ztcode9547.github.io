@@ -7,7 +7,82 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_abandon</copyright>
-        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CHAOARO：基于动态混沌对抗的学习驱动混合Aquila优化器和人工兔优化算法</title>
+        <link>https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</link>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</guid>
+        <description>&lt;img src="https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/CHAOARO.png" alt="Featured image of post CHAOARO：基于动态混沌对抗的学习驱动混合Aquila优化器和人工兔优化算法" /&gt;&lt;p&gt;论文2：&amp;ldquo;CHAOARO：基于动态混沌对抗的学习驱动混合Aquila优化器和人工兔优化算法&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.AO：Aquila 优化器（2021）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;AO具有强大的探索能力，但由于探索阶段不足，在解决一些复杂情况时仍然存在求解精度差和过早收敛的问题。&lt;/p&gt;
+&lt;p&gt;证明AO缺点的论文:Zhao, J.; Gao, Z.-M.; Chen, H.-F. The simplified aquila optimization algorithm. IEEE Access 2022, 10, 22487–22515. [CrossRef]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.ARO具有非常有竞争力的开采潜力，但其勘探能力还需要更令人满意。（2022）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	ARO算法的灵感来源于自然界中兔子的生存策略，包括迂回觅食和随机躲藏。迂回觅食策略迫使兔子吃其他兔子巢穴附近的草，这可以防止它的巢穴被捕食者发现。随机躲藏策略可以让兔子在自己的洞穴中随机选择一个洞穴躲藏，这样可以减少被敌人捕获的可能性。此外，兔子的能量收缩会导致其从迂回觅食策略向随机躲藏策略转变。该算法对这种生存策略进行数学建模，以开发一种新的优化器。&lt;/p&gt;
+&lt;p&gt;​	ARO的探索和开发过程由E控制，这个E的公式里面是有随机数的，所以在勘探里面会有开发，在开发里面也会有勘探，但总的来说，前期勘探多，后期开发多。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/ARO.png&#34;
+	width=&#34;815&#34;
+	height=&#34;582&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/ARO_hu18218028476315088719.png 480w, https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/ARO_hu1591504996471219799.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ARO&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.该论文的创新点结合AO的勘探机制和ARO的开发机制，设计了自适应切换机制（ASM）以更好地控制探索和开发过程。这个自适应切换机制就是AVAO的饥饿率，还引入混沌对立学习（COBL）策略来避免算法陷入局部最优。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.混沌对立学习：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E6%B7%B7%E6%B2%8C%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0.png&#34;
+	width=&#34;262&#34;
+	height=&#34;68&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E6%B7%B7%E6%B2%8C%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu6911134787683554913.png 480w, https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E6%B7%B7%E6%B2%8C%E5%AF%B9%E7%AB%8B%E5%AD%A6%E4%B9%A0_hu17122665319887741086.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;混沌对立学习&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;385&#34;
+		data-flex-basis=&#34;924px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这个&lt;em&gt;φ&lt;/em&gt;就是混沌因子，论文里面提及了10个。需选择实验结果最好的一个&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E6%B7%B7%E6%B2%8C%E5%9B%A0%E5%AD%90.png&#34;
+	width=&#34;863&#34;
+	height=&#34;500&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E6%B7%B7%E6%B2%8C%E5%9B%A0%E5%AD%90_hu17867462042898740033.png 480w, https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/%E6%B7%B7%E6%B2%8C%E5%9B%A0%E5%AD%90_hu12480863395797819792.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;混沌因子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;提醒一下，除了现在学习的混沌对立学习，之前学习了随机对立学习，镜头对立学习和螺旋对立学习&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/CHAOARO.png&#34;
+	width=&#34;1155&#34;
+	height=&#34;814&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/CHAOARO_hu7473125948031212917.png 480w, https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/CHAOARO_hu13981360604815001656.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;CHAOARO&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;340px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃鹫优化算法</title>
         <link>https://ztcode9547.github.io/p/ihaoavoa%E9%92%88%E5%AF%B9%E5%85%A8%E5%B1%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%94%B9%E8%BF%9B%E6%B7%B7%E5%90%88-aquila-%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E9%9D%9E%E6%B4%B2%E7%A7%83%E9%B9%AB%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</link>
         <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
