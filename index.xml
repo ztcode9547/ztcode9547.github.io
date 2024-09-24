@@ -7,15 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>404_abandon</copyright>
-        <lastBuildDate>Mon, 23 Sep 2024 22:04:46 +0800</lastBuildDate><atom:link href="https://ztcode9547.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Index.zh Ch</title>
-        <link>https://ztcode9547.github.io/p/index.zh-ch/</link>
-        <pubDate>Mon, 23 Sep 2024 22:04:46 +0800</pubDate>
-        
-        <guid>https://ztcode9547.github.io/p/index.zh-ch/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CHAOARO：基于动态混沌对抗的学习驱动混合Aquila优化器和人工兔优化算法</title>
         <link>https://ztcode9547.github.io/p/chaoaro%E5%9F%BA%E4%BA%8E%E5%8A%A8%E6%80%81%E6%B7%B7%E6%B2%8C%E5%AF%B9%E6%8A%97%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%A9%B1%E5%8A%A8%E6%B7%B7%E5%90%88aquila%E4%BC%98%E5%8C%96%E5%99%A8%E5%92%8C%E4%BA%BA%E5%B7%A5%E5%85%94%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</link>
         <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
@@ -383,6 +375,14 @@ IHAOAVOA：针对全局优化问题的改进混合 Aquila 优化器和非洲秃�
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;git的使用&#34;&gt;git的使用
 &lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>手撕线程池</title>
+        <link>https://ztcode9547.github.io/p/%E6%89%8B%E6%92%95%E7%BA%BF%E7%A8%8B%E6%B1%A0/</link>
+        <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://ztcode9547.github.io/p/%E6%89%8B%E6%92%95%E7%BA%BF%E7%A8%8B%E6%B1%A0/</guid>
+        <description></description>
         </item>
         <item>
         <title>C&#43;&#43;基本特性</title>
