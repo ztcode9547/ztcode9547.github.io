@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="程序的执行过程 \u200b\t编程被执行后会变成一个进程。进程会生成一个虚拟地址空间。但是对于程序员来说，只要了解虚拟地址空间的四个区即可。想深入了解，可以去学习操作系统这门课。\n">
+<title>C&#43;&#43;基本特性</title>
+
+<link rel='canonical' href='https://ztcode9547.github.io/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="C++基本特性">
+<meta property='og:description' content="程序的执行过程 \u200b\t编程被执行后会变成一个进程。进程会生成一个虚拟地址空间。但是对于程序员来说，只要了解虚拟地址空间的四个区即可。想深入了解，可以去学习操作系统这门课。\n">
+<meta property='og:url' content='https://ztcode9547.github.io/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/'>
+<meta property='og:site_name' content='404_abandon'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='现代C&#43;&#43;' /><meta property='article:tag' content='语法' /><meta property='article:published_time' content='2023-08-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-08-01T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="C++基本特性">
+<meta name="twitter:description" content="程序的执行过程 \u200b\t编程被执行后会变成一个进程。进程会生成一个虚拟地址空间。但是对于程序员来说，只要了解虚拟地址空间的四个区即可。想深入了解，可以去学习操作系统这门课。\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu9585808156293949831.png" width="300"
+                            height="225" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😏</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">404_abandon</a></h1>
+            <h2 class="site-description">欢迎来到我的博客</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/c&#43;&#43;%E6%96%B0%E7%89%B9%E6%80%A7/" >
+                C&#43;&#43;新特性
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/">C&#43;&#43;基本特性</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2023-08-01</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="程序的执行过程">程序的执行过程
+</h1><p>​	编程被执行后会变成一个进程。进程会生成一个虚拟地址空间。但是对于程序员来说，只要了解虚拟地址空间的四个区即可。想深入了解，可以去学习操作系统这门课。</p>
+<ol>
+<li>
+<p>代码区和常量区：
+​	 此区是用来存放代码的，也会用来存放真正的常量，比如“abc”字符串，“1”，“88”等数字。这些是真正的常量。再来看，使用const关键字修饰的变量，只是编译器把变量视为常量罢了。和真正的常量有本质上的区别。如果是局部变量被const关键字修饰，那它很有可能存在栈上。如果是全局的变量被const修饰，那它可能存在常量区，这要看编译器。</p>
+</li>
+<li>
+<p>栈区</p>
+</li>
+</ol>
+<p>​	是函数执行的空间，规则是先入后处出。当函数开始执行，将会压栈。当函数执行完毕，将会出栈，内存将会释放。
+3. 堆区</p>
+<p>​	是程序动态分配内存的地方，因为栈区的内存很小，如果我们有一个很大的变量，压栈是非常耗费资源的。所以我们可以在堆区给那个很大的变量动态分配内存，得到指向那个变量的指针后·。在栈区使用指针来操作那个变量，提高了程序的执行效率。<strong>需要提醒一点：堆区的内存远远大于栈区。</strong></p>
+<p>​	<strong>有一个非常注意的点，堆区的内存需要手动释放，不然会造成内存泄漏。而栈则不需要，栈会根据顺序自动出栈，所以内存会自动销毁。</strong></p>
+<ol start="4">
+<li>静态变量区和全局变量</li>
+</ol>
+<p>​	是存放静态变量的区域。所有的变量概括起来，就两个范畴。一个是生命周期，一个是作用域。静态变量是生命周期贯穿整个进程。但是它有自己的作用域。静态变量是在<strong>程序运行前</strong>，就进行了初始化。和那些在栈上面完成初始化，在堆上动态分配内存后在开始初始化的变量，有本质的区别。</p>
+<p>​	是存放全局变量的区域。全局变量是**所有函数之外（包括main函数外）**定义的变量，这种变量叫全局变量。<strong>在c语言中经常使用，但是在C++不建议使用，因为会破坏封装性</strong></p>
+<p><img src="/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E5%86%85%E5%AD%98.png"
+	width="603"
+	height="411"
+	srcset="/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E5%86%85%E5%AD%98_hu11848909714227405779.png 480w, /p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E5%86%85%E5%AD%98_hu1641559402407678564.png 1024w"
+	loading="lazy"
+	
+		alt="虚拟地址内存"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="352px"
+	
+></p>
+<p><strong>非常有可能遇到的坑：在栈上面动态分配内存后，得到的指向那块内存的指针。这个指针是属于栈上的局部变量，它会随着出栈而被释放。如果这个变量是普通的变量，没有析构函数，那会造成内存泄漏问题。所有一定要几种手动释放内存。</strong></p>
+<h1 id="new关键字">new关键字
+</h1><p>C++经常使用new关键字动态分配内存</p>
+<p>它可以给当个变量分配内存，也可给数组分配内存</p>
+<ul>
+<li>
+<p>在分配单个对象的内存时。</p>
+<ul>
+<li>当对象是普通变量时，可以分配对应的内存</li>
+<li>当对象是类对象时，会调用<strong>构造函数</strong>，如果没有对应的<strong>构造函数</strong>，<strong>就会报错。</strong></li>
+</ul>
+</li>
+<li>
+<p>在分配数组对象内存时：</p>
+<ul>
+<li>对于普通变量：可以使用“（）”将所有对象全部初始化为0。</li>
+<li>对于类对象，有没有“（）”都一样，均使用<strong>默认构造函数</strong>，如果没<strong>有默认构造函数就会报错</strong>。</li>
+</ul>
+</li>
+<li>
+<p>和c语言的malloc的区别：使用普通变量没区别，分配类对象的时候，new首先会分配内存，然后再调用构造函数。</p>
+</li>
+</ul>
+<h1 id="内存泄漏问题">内存泄漏问题
+</h1><p>内存泄漏是指堆内存被占满，这是最严重的错误，会导致程序破溃。且这种错误非常的隐秘。</p>
+<p>避免内存泄漏的方法：</p>
+<p>1.new内存，记得delete掉，但是人往往会疏忽。</p>
+<p>2.使用智能指针，智能指针能够自己释放掉内存。是非常好的防御性编程手段。</p>
+<p>3.使用<strong>异常处理</strong>部分可以恰当的处理程序出现的异常，让程序有错误就立马处理，或直接终止进程，或忽略，不要让异常莫	名其妙。这也是非常好的防御性编程手段。</p>
+<p>4.使用一些监测内存泄漏的工具。在window端和Linux端都有这样的工具</p>
+<h1 id="命名空间">命名空间
+</h1><p>​	在大型项目中，往往是多个小组协调合作。所有很容易造成命名的重复，造成编译的错误。所有命名空间就是为解决这个问题而出现的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">//比如团队A和团队B都需要定义一个叫做Test的类。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">namespace</span> <span class="n">A</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">test</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="n">B</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">test</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>命名空间的实现原理，C++最后都要转化为C来执行程序。<strong>在namespace A中定义的Test类，其实全名是A::Test。</strong></p>
+</li>
+<li>
+<p>C++所有特有的库（指c没有的库）,都使用了std的命名空间。比如最常用的iostream。</p>
+</li>
+</ul>
+<p>提及命名空间，就不得不提using关键字了。</p>
+<p>using关键字是为了节省命名空间的书写。using关键字在命名空间方面主要有两种用法。</p>
+<ol>
+<li>using 命名空间：：变量名。这样以后使用此变量时只要使用变量名就可以了。</li>
+<li>using namspce 命名空间。这样，每一个变量都会在该命名空间中寻找。</li>
+</ol>
+<p><strong>注意点：using关键字虽然方便，但也有可能造成命名空间的污染，当两个空间的同名的变量都使用using关键字，编译器就不知道使用哪一个了。所有千万不要在头文件使用using关键字，这样造成命名空间污染是很难找到。要使用也要在main.cpp文件下使用。</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%8E%B0%E4%BB%A3c&#43;&#43;/">现代C&#43;&#43;</a>
+        
+            <a href="/tags/%E8%AF%AD%E6%B3%95/">语法</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2024 404_abandon
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

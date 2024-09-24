@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>博客改造 on 404_abandon</title>
+        <link>https://ztcode9547.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0/</link>
+        <description>Recent content in 博客改造 on 404_abandon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>404_abandon</copyright>
+        <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>找工作</title>
+        <link>https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/</link>
+        <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/</guid>
+        <description>&lt;img src="https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/%E5%85%AC%E5%8F%B82.png" alt="Featured image of post 找工作" /&gt;&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/%E5%85%AC%E5%8F%B81.png&#34;
+	width=&#34;733&#34;
+	height=&#34;689&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/%E5%85%AC%E5%8F%B81_hu16037978816924581405.png 480w, https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/%E5%85%AC%E5%8F%B81_hu742317516339029420.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;公司1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;255px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/%E5%85%AC%E5%8F%B82.png&#34;
+	width=&#34;698&#34;
+	height=&#34;491&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/%E5%85%AC%E5%8F%B82_hu15396000932171218181.png 480w, https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/%E5%85%AC%E5%8F%B82_hu17038690286567299099.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;公司2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;341px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/offer3.png&#34;
+	width=&#34;595&#34;
+	height=&#34;839&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/offer3_hu6405417662942997304.png 480w, https://ztcode9547.github.io/p/%E6%89%BE%E5%B7%A5%E4%BD%9C/offer3_hu515633640210369803.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;offer3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;70&#34;
+		data-flex-basis=&#34;170px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>使用 Hugo 建立自己的 Blog</title>
+        <link>https://ztcode9547.github.io/p/%E4%BD%BF%E7%94%A8-hugo-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/</link>
+        <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://ztcode9547.github.io/p/%E4%BD%BF%E7%94%A8-hugo-%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/</guid>
+        <description>&lt;img src="https://ztcode9547.github.io/florian-klauer-nptLmg6jqDo-unsplash.jpg" alt="Featured image of post 使用 Hugo 建立自己的 Blog" /&gt;&lt;h1 id=&#34;线程同步&#34;&gt;线程同步
+&lt;/h1&gt;&lt;h2 id=&#34;概念&#34;&gt;概念
+&lt;/h2&gt;&lt;h2 id=&#34;同步方式&#34;&gt;同步方式
+&lt;/h2&gt;&lt;p&gt;互斥锁，读写锁，条件变量和信号量&lt;/p&gt;
+&lt;h2 id=&#34;临界资源&#34;&gt;临界资源
+&lt;/h2&gt;&lt;p&gt;全局变量或者是堆区变量&lt;/p&gt;
+&lt;h2 id=&#34;互斥量&#34;&gt;互斥量
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;不是所有的线程都可以对互斥锁解锁，哪个线程加的锁, 哪个线程才能解锁成功。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;死锁&#34;&gt;死锁
+&lt;/h2&gt;&lt;h2 id=&#34;读写锁&#34;&gt;读写锁
+&lt;/h2&gt;&lt;p&gt;​	&lt;strong&gt;读写锁是互斥锁的升级版, 在做读操作的时候可以提高程序的执行效率，如果所有的线程都是做读操作, 那么读是并行的，但是使用互斥锁，读操作也是串行的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	有两种锁的方式：锁读操作和锁写操作。锁读操作后，其他的锁读操作是被允许的，但是锁写操作就被阻塞了。锁写操作后，其他的锁读操作和锁读操作是不被允许的。&lt;/p&gt;
+&lt;h2 id=&#34;条件变量&#34;&gt;条件变量
+&lt;/h2&gt;&lt;p&gt;一般情况下条件变量用于处理生产者和消费者模型，并且和互斥锁配合使用。&lt;/p&gt;
+&lt;h2 id=&#34;信号量&#34;&gt;信号量
+&lt;/h2&gt;&lt;p&gt;信号量和条件变量相同的是可以阻塞线程，不同的是条件变量能解开互斥量的锁，信号量不能解锁。&lt;/p&gt;
+&lt;p&gt;资源数为1：如果生产者和消费者使用的信号量总资源数为1，那么不会出现生产者线程和消费者线程同时访问共享资源的情况，不管生产者和消费者线程有多少个，它们都是顺序执行的。&lt;/p&gt;
+&lt;p&gt;资源数大于1，需要搭配互斥量使用，注意使用的顺序问题&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>语法 on 404_abandon</title>
+        <link>https://ztcode9547.github.io/tags/%E8%AF%AD%E6%B3%95/</link>
+        <description>Recent content in 语法 on 404_abandon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>404_abandon</copyright>
+        <lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ztcode9547.github.io/tags/%E8%AF%AD%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C&#43;&#43;基本特性</title>
+        <link>https://ztcode9547.github.io/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/</link>
+        <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://ztcode9547.github.io/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/</guid>
+        <description>&lt;h1 id=&#34;程序的执行过程&#34;&gt;程序的执行过程
+&lt;/h1&gt;&lt;p&gt;​	编程被执行后会变成一个进程。进程会生成一个虚拟地址空间。但是对于程序员来说，只要了解虚拟地址空间的四个区即可。想深入了解，可以去学习操作系统这门课。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;代码区和常量区：
+​	 此区是用来存放代码的，也会用来存放真正的常量，比如“abc”字符串，“1”，“88”等数字。这些是真正的常量。再来看，使用const关键字修饰的变量，只是编译器把变量视为常量罢了。和真正的常量有本质上的区别。如果是局部变量被const关键字修饰，那它很有可能存在栈上。如果是全局的变量被const修饰，那它可能存在常量区，这要看编译器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;栈区&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​	是函数执行的空间，规则是先入后处出。当函数开始执行，将会压栈。当函数执行完毕，将会出栈，内存将会释放。
+3. 堆区&lt;/p&gt;
+&lt;p&gt;​	是程序动态分配内存的地方，因为栈区的内存很小，如果我们有一个很大的变量，压栈是非常耗费资源的。所以我们可以在堆区给那个很大的变量动态分配内存，得到指向那个变量的指针后·。在栈区使用指针来操作那个变量，提高了程序的执行效率。&lt;strong&gt;需要提醒一点：堆区的内存远远大于栈区。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;有一个非常注意的点，堆区的内存需要手动释放，不然会造成内存泄漏。而栈则不需要，栈会根据顺序自动出栈，所以内存会自动销毁。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;静态变量区和全局变量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​	是存放静态变量的区域。所有的变量概括起来，就两个范畴。一个是生命周期，一个是作用域。静态变量是生命周期贯穿整个进程。但是它有自己的作用域。静态变量是在&lt;strong&gt;程序运行前&lt;/strong&gt;，就进行了初始化。和那些在栈上面完成初始化，在堆上动态分配内存后在开始初始化的变量，有本质的区别。&lt;/p&gt;
+&lt;p&gt;​	是存放全局变量的区域。全局变量是**所有函数之外（包括main函数外）**定义的变量，这种变量叫全局变量。&lt;strong&gt;在c语言中经常使用，但是在C++不建议使用，因为会破坏封装性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ztcode9547.github.io/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E5%86%85%E5%AD%98.png&#34;
+	width=&#34;603&#34;
+	height=&#34;411&#34;
+	srcset=&#34;https://ztcode9547.github.io/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E5%86%85%E5%AD%98_hu11848909714227405779.png 480w, https://ztcode9547.github.io/p/c-%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E5%86%85%E5%AD%98_hu1641559402407678564.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;虚拟地址内存&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;非常有可能遇到的坑：在栈上面动态分配内存后，得到的指向那块内存的指针。这个指针是属于栈上的局部变量，它会随着出栈而被释放。如果这个变量是普通的变量，没有析构函数，那会造成内存泄漏问题。所有一定要几种手动释放内存。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;new关键字&#34;&gt;new关键字
+&lt;/h1&gt;&lt;p&gt;C++经常使用new关键字动态分配内存&lt;/p&gt;
+&lt;p&gt;它可以给当个变量分配内存，也可给数组分配内存&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在分配单个对象的内存时。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当对象是普通变量时，可以分配对应的内存&lt;/li&gt;
+&lt;li&gt;当对象是类对象时，会调用&lt;strong&gt;构造函数&lt;/strong&gt;，如果没有对应的&lt;strong&gt;构造函数&lt;/strong&gt;，&lt;strong&gt;就会报错。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在分配数组对象内存时：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于普通变量：可以使用“（）”将所有对象全部初始化为0。&lt;/li&gt;
+&lt;li&gt;对于类对象，有没有“（）”都一样，均使用&lt;strong&gt;默认构造函数&lt;/strong&gt;，如果没&lt;strong&gt;有默认构造函数就会报错&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;和c语言的malloc的区别：使用普通变量没区别，分配类对象的时候，new首先会分配内存，然后再调用构造函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;内存泄漏问题&#34;&gt;内存泄漏问题
+&lt;/h1&gt;&lt;p&gt;内存泄漏是指堆内存被占满，这是最严重的错误，会导致程序破溃。且这种错误非常的隐秘。&lt;/p&gt;
+&lt;p&gt;避免内存泄漏的方法：&lt;/p&gt;
+&lt;p&gt;1.new内存，记得delete掉，但是人往往会疏忽。&lt;/p&gt;
+&lt;p&gt;2.使用智能指针，智能指针能够自己释放掉内存。是非常好的防御性编程手段。&lt;/p&gt;
+&lt;p&gt;3.使用&lt;strong&gt;异常处理&lt;/strong&gt;部分可以恰当的处理程序出现的异常，让程序有错误就立马处理，或直接终止进程，或忽略，不要让异常莫	名其妙。这也是非常好的防御性编程手段。&lt;/p&gt;
+&lt;p&gt;4.使用一些监测内存泄漏的工具。在window端和Linux端都有这样的工具&lt;/p&gt;
+&lt;h1 id=&#34;命名空间&#34;&gt;命名空间
+&lt;/h1&gt;&lt;p&gt;​	在大型项目中，往往是多个小组协调合作。所有很容易造成命名的重复，造成编译的错误。所有命名空间就是为解决这个问题而出现的。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//比如团队A和团队B都需要定义一个叫做Test的类。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;命名空间的实现原理，C++最后都要转化为C来执行程序。&lt;strong&gt;在namespace A中定义的Test类，其实全名是A::Test。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C++所有特有的库（指c没有的库）,都使用了std的命名空间。比如最常用的iostream。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;提及命名空间，就不得不提using关键字了。&lt;/p&gt;
+&lt;p&gt;using关键字是为了节省命名空间的书写。using关键字在命名空间方面主要有两种用法。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;using 命名空间：：变量名。这样以后使用此变量时只要使用变量名就可以了。&lt;/li&gt;
+&lt;li&gt;using namspce 命名空间。这样，每一个变量都会在该命名空间中寻找。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;注意点：using关键字虽然方便，但也有可能造成命名空间的污染，当两个空间的同名的变量都使用using关键字，编译器就不知道使用哪一个了。所有千万不要在头文件使用using关键字，这样造成命名空间污染是很难找到。要使用也要在main.cpp文件下使用。&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
